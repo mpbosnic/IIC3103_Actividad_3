@@ -7,9 +7,10 @@
         Hello World!
         <script src="https://integracion-actividad-3.herokuapp.com/trucks/socket.io.js"></script>
         <script>
-            var socket = io("https://integracion-actividad-3.herokuapp.com", { path: "trucks" });
+            var socket = io("https://integracion-actividad-3.herokuapp.com", { path: "/trucks" });
             socket.on('POSITION', function(msg){
                     console.log('CAMION ' + msg.code + ' posicion: ' + msg.position[0] + ',' + msg.position[1]);
+                    document.write('<br> CAMION ' + msg.code + ' posicion: ' + msg.position[0] + ',' + msg.position[1]);
                 });
         </script>
     </body>
